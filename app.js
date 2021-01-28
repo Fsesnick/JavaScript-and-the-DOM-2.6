@@ -7,11 +7,15 @@ const addItemInput = document.querySelector('input.addItemInput');
 const addItemButton = document.querySelector('button.addItemButton');
 const removeItemButton = document.querySelector('button.removeItemButton');
 
-listDiv.addEventListener('mouseover', () => {
-  listItems[i].textContent = listItems[i].textContent.toUpperCase();
-});
-listDiv.addEventListener('mouseout', () => {
-  listItems[i].textContent = listItems[i].textContent.toLowerCase();
+//listDiv.addEventListener('mouseover', () => {
+//  listItems[i].textContent = listItems[i].textContent.toUpperCase();
+//});
+//listDiv.addEventListener('mouseout', () => {
+//  listItems[i].textContent = listItems[i].textContent.toLowerCase();
+//});
+
+document.addEventListener('click', (event) =>{
+  console.log(event.target);
 });
 
 toggleList.addEventListener('click', () => {
