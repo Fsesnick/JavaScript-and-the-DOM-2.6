@@ -7,21 +7,26 @@ const listUl = listDiv.querySelector('ul');
 const addItemInput = document.querySelector('input.addItemInput');
 const addItemButton = document.querySelector('button.addItemButton');
 const lis = listUl.children;
+const firstListItem = listUl.firstElementChild;
+const lastListItem = listUl.lastElementChild;
+
+firstListItem.style.backgroundColor = 'lightskyblue';
+lastListItem.style.backgroundColor = 'lightsteelblue';
 
 function attachListItemButtons(li) {
   let up = document.createElement('button');
   up.className = 'up';
-  up.textContent = 'Para cima';
+  up.textContent = 'Up';
   li.appendChild(up);
   
   let down = document.createElement('button');
   down.className = 'down';
-  down.textContent = 'Para baixo';
+  down.textContent = 'Down';
   li.appendChild(down);  
   
   let remove = document.createElement('button');
   remove.className = 'remove';
-  remove.textContent = 'Remover';
+  remove.textContent = 'Remove';
   li.appendChild(remove);
 }
 
@@ -78,6 +83,10 @@ addItemButton.addEventListener('click', () => {
   ul.appendChild(li);
   addItemInput.value = '';
 });
+  
+  
+  
+
   
   
   
