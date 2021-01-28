@@ -9,12 +9,22 @@ const addItemButton = document.querySelector('button.addItemButton');
 //const removeItemButton = document.querySelector('button.removeItemButton');
 
 listUl.addEventListener('click', (event) => {
+  
   if(event.target.tagName == 'BUTTON'){
- // event.target.textContent = event.target.textContent.toUpperCase();
+   if(event.target.className == 'remover'){
     let li = event.target.parentNode;
     let ul = li.parentNode;
     ul.removeChild(li);
   }
+    if(event.target.className == 'acima'){
+    let li = event.target.parentNode;
+    let prevLi = li.previousElementSibling;
+    let ul = li.parentNode;
+    if(prevLi){
+    ul.insertBefore(li,prevLi);
+    }
+  }
+ }
 });
 
 /*listDiv.addEventListener('mouseout', (event) => {
