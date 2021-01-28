@@ -7,18 +7,22 @@ const addItemInput = document.querySelector('input.addItemInput');
 const addItemButton = document.querySelector('button.addItemButton');
 const removeItemButton = document.querySelector('button.removeItemButton');
 
-listDiv.addEventListener('mouseover', (event) => {
+listDiv.addEventListener('click', (event) => {
   if(event.target.tagName == 'LI'){
-  event.target.textContent = event.target.textContent.toUpperCase();
-  }
-});
-listDiv.addEventListener('mouseout', (event) => {
-  if(event.target.tagName == 'LI'){
-  event.target.textContent = event.target.textContent.toLowerCase();
+ // event.target.textContent = event.target.textContent.toUpperCase();
+    let li = event.target;
+    let ul = li.parentNode;
+    ul.removeChild(li);
   }
 });
 
-/*
+/*listDiv.addEventListener('mouseout', (event) => {
+  if(event.target.tagName == 'LI'){
+ // event.target.textContent = event.target.textContent.toLowerCase();
+  }
+});
+
+
 document.addEventListener('click', (event) =>{
   console.log(event.target);
 });
