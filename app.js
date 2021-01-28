@@ -3,14 +3,15 @@ const listDiv = document.querySelector('.list');
 const descriptionInput = document.querySelector('input.description');
 const descriptionP = document.querySelector('p.description');
 const descriptionButton = document.querySelector('button.description');
+const listUl = listDiv.querySelector('ul');
 const addItemInput = document.querySelector('input.addItemInput');
 const addItemButton = document.querySelector('button.addItemButton');
 const removeItemButton = document.querySelector('button.removeItemButton');
 
-listDiv.addEventListener('click', (event) => {
-  if(event.target.tagName == 'LI'){
+listUl.addEventListener('click', (event) => {
+  if(event.target.tagName == 'BUTTON'){
  // event.target.textContent = event.target.textContent.toUpperCase();
-    let li = event.target;
+    let li = event.target.parentNode;
     let ul = li.parentNode;
     ul.removeChild(li);
   }
